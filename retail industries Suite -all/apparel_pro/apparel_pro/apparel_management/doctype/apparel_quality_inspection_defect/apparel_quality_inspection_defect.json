@@ -1,0 +1,37 @@
+{
+ "doctype": "DocType",
+ "name": "Apparel Quality Inspection Defect",
+ "module": "Apparel Management",
+ "custom": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "defect_type",
+   "fieldtype": "Data",
+   "label": "Defect Type",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "Minor\\nMajor\\nCritical",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "engine": "InnoDB"
+}

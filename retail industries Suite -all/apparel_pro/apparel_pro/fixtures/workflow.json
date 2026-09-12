@@ -1,0 +1,86 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "Apparel Production Workflow",
+  "document_type": "Apparel Production Order",
+  "workflow_name": "Apparel Production Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Cutting",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Sewing",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Finishing",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Packed",
+    "doc_status": "0",
+    "allow_edit": "Apparel Manager"
+   },
+   {
+    "state": "Completed",
+    "doc_status": "1",
+    "allow_edit": "Apparel Manager"
+   },
+   {
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "Apparel Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Start Cutting",
+    "next_state": "Cutting",
+    "allowed": "Apparel User"
+   },
+   {
+    "state": "Cutting",
+    "action": "Start Sewing",
+    "next_state": "Sewing",
+    "allowed": "Apparel User"
+   },
+   {
+    "state": "Sewing",
+    "action": "Start Finishing",
+    "next_state": "Finishing",
+    "allowed": "Apparel User"
+   },
+   {
+    "state": "Finishing",
+    "action": "Mark Packed",
+    "next_state": "Packed",
+    "allowed": "Apparel Manager"
+   },
+   {
+    "state": "Packed",
+    "action": "Complete",
+    "next_state": "Completed",
+    "allowed": "Apparel Manager"
+   },
+   {
+    "state": "Draft",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "Apparel Manager"
+   }
+  ]
+ }
+]

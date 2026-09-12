@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Loyalty Points Balance Summary",
+ "module": "Lifestyle Fashion Management",
+ "ref_doctype": "Loyalty Points Ledger",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

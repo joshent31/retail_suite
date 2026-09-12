@@ -1,0 +1,25 @@
+{
+ "doctype": "DocType",
+ "name": "Accessory Material Detail",
+ "module": "Accessories Management",
+ "custom": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "material_name",
+   "fieldtype": "Data",
+   "label": "Material Name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage",
+   "in_list_view": 1
+  }
+ ],
+ "engine": "InnoDB"
+}

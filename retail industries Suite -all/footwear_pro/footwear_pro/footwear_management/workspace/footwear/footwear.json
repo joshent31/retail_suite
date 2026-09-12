@@ -1,0 +1,63 @@
+{
+ "doctype": "Workspace",
+ "name": "Footwear",
+ "label": "Footwear",
+ "title": "Footwear",
+ "module": "Footwear Management",
+ "icon": "octicon octicon-package",
+ "is_standard": 1,
+ "public": 1,
+ "sequence_id": 1.0,
+ "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Footwear</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Style Master\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Material BOM\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear QC Inspection\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Warranty Claim\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Vendor Rating\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Masters\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Quality & Warranty\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "type": "DocType",
+   "label": "Footwear Style Master",
+   "link_to": "Footwear Style Master",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Footwear Material BOM",
+   "link_to": "Footwear Material BOM",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Footwear QC Inspection",
+   "link_to": "Footwear QC Inspection",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Footwear Warranty Claim",
+   "link_to": "Footwear Warranty Claim",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Footwear Vendor Rating",
+   "link_to": "Footwear Vendor Rating",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  }
+ ],
+ "links": [],
+ "charts": [],
+ "number_cards": [],
+ "quick_lists": []
+}

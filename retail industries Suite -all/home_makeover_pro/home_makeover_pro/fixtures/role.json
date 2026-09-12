@@ -1,0 +1,12 @@
+[
+ {
+  "doctype": "Role",
+  "role_name": "Home Makeover Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Home Makeover Designer",
+  "desk_access": 1
+ }
+]

@@ -1,0 +1,24 @@
+{
+ "doctype": "DocType",
+ "name": "Trend Reference Image",
+ "module": "Lifestyle Fashion Management",
+ "custom": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "caption",
+   "fieldtype": "Data",
+   "label": "Caption",
+   "in_list_view": 1
+  }
+ ],
+ "engine": "InnoDB"
+}

@@ -1,0 +1,72 @@
+{
+ "doctype": "Workspace",
+ "name": "Lifestyle & Fashion",
+ "label": "Lifestyle & Fashion",
+ "title": "Lifestyle & Fashion",
+ "module": "Lifestyle Fashion Management",
+ "icon": "octicon octicon-heart",
+ "is_standard": 1,
+ "public": 1,
+ "sequence_id": 1.0,
+ "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Lifestyle & Fashion</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fashion Collection Master\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Influencer Brand Collaboration\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trend Forecast Board\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lookbook\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Loyalty Points Ledger\", \"col\": 3}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Style Consultation Booking\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Collections\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Customer Engagement\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "type": "DocType",
+   "label": "Fashion Collection Master",
+   "link_to": "Fashion Collection Master",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Influencer Brand Collaboration",
+   "link_to": "Influencer Brand Collaboration",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Trend Forecast Board",
+   "link_to": "Trend Forecast Board",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Lookbook",
+   "link_to": "Lookbook",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Loyalty Points Ledger",
+   "link_to": "Loyalty Points Ledger",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Style Consultation Booking",
+   "link_to": "Style Consultation Booking",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  }
+ ],
+ "links": [],
+ "charts": [],
+ "number_cards": [],
+ "quick_lists": []
+}

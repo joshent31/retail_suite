@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Accessory Consignment Ageing",
+ "module": "Accessories Management",
+ "ref_doctype": "Accessory Consignment Stock",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

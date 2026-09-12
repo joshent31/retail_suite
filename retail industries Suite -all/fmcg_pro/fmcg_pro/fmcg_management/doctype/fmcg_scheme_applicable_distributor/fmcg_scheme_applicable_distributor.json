@@ -1,0 +1,21 @@
+{
+ "doctype": "DocType",
+ "name": "FMCG Scheme Applicable Distributor",
+ "module": "Fmcg Management",
+ "custom": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "distributor",
+   "fieldtype": "Link",
+   "label": "Distributor",
+   "options": "FMCG Distributor Master",
+   "reqd": 1,
+   "in_list_view": 1
+  }
+ ],
+ "engine": "InnoDB"
+}

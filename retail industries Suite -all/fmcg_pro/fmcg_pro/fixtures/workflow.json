@@ -1,0 +1,53 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "FMCG Scheme Promotion Workflow",
+  "document_type": "FMCG Scheme Promotion",
+  "workflow_name": "FMCG Scheme Promotion Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FMCG User"
+   },
+   {
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "FMCG Manager"
+   },
+   {
+    "state": "Active",
+    "doc_status": "1",
+    "allow_edit": "FMCG Manager"
+   },
+   {
+    "state": "Expired",
+    "doc_status": "1",
+    "allow_edit": "FMCG Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FMCG Manager"
+   },
+   {
+    "state": "Approved",
+    "action": "Activate",
+    "next_state": "Active",
+    "allowed": "FMCG Manager"
+   },
+   {
+    "state": "Active",
+    "action": "Expire",
+    "next_state": "Expired",
+    "allowed": "FMCG Manager"
+   }
+  ]
+ }
+]

@@ -1,0 +1,1 @@
+recursive-include footwear_pro *.json *.csv *.md *.txt *.html *.js *.css

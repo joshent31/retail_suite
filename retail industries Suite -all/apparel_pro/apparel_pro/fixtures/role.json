@@ -1,0 +1,12 @@
+[
+ {
+  "doctype": "Role",
+  "role_name": "Apparel Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Apparel User",
+  "desk_access": 1
+ }
+]

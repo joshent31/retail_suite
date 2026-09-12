@@ -1,0 +1,63 @@
+{
+ "doctype": "Workspace",
+ "name": "Apparel",
+ "label": "Apparel",
+ "title": "Apparel",
+ "module": "Apparel Management",
+ "icon": "octicon octicon-tag",
+ "is_standard": 1,
+ "public": 1,
+ "sequence_id": 1.0,
+ "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Apparel</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Apparel Style Master\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Apparel Production Order\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Apparel Quality Inspection\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Apparel Return Exchange Request\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Apparel Size Chart\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Masters\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Production\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "type": "DocType",
+   "label": "Apparel Style Master",
+   "link_to": "Apparel Style Master",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Apparel Production Order",
+   "link_to": "Apparel Production Order",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Apparel Quality Inspection",
+   "link_to": "Apparel Quality Inspection",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Apparel Return Exchange Request",
+   "link_to": "Apparel Return Exchange Request",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "Apparel Size Chart",
+   "link_to": "Apparel Size Chart",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  }
+ ],
+ "links": [],
+ "charts": [],
+ "number_cards": [],
+ "quick_lists": []
+}

@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Apparel Production Status",
+ "module": "Apparel Management",
+ "ref_doctype": "Apparel Production Order",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

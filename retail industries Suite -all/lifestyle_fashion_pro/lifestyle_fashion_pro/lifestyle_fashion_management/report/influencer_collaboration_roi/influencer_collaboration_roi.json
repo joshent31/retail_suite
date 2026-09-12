@@ -1,0 +1,15 @@
+{
+ "doctype": "Report",
+ "name": "Influencer Collaboration ROI",
+ "module": "Lifestyle Fashion Management",
+ "ref_doctype": "Influencer Brand Collaboration",
+ "report_type": "Query Report",
+ "is_standard": "Yes",
+ "query": "SELECT\n  ibc.influencer_name as \"Influencer:Data:150\",\n  ibc.platform as \"Platform:Data:100\",\n  ibc.collection as \"Collection:Link/Fashion Collection Master:150\",\n  ibc.agreed_amount as \"Agreed Amount:Currency:120\",\n  ibc.workflow_state as \"Status:Data:100\"\nFROM `tabInfluencer Brand Collaboration` ibc\nORDER BY ibc.agreed_amount DESC",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

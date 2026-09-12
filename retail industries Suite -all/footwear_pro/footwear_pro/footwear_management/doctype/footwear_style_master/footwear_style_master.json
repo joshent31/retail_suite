@@ -1,0 +1,153 @@
+{
+ "doctype": "DocType",
+ "name": "Footwear Style Master",
+ "module": "Footwear Management",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "style_code",
+   "fieldtype": "Data",
+   "label": "Style Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "style_name",
+   "fieldtype": "Data",
+   "label": "Style Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Linked Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Sneakers\\nFormal\\nSandals\\nBoots\\nSports\\nCasual",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Men\\nWomen\\nUnisex\\nKids"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Select",
+   "label": "Season",
+   "options": "Spring/Summer\\nAutumn/Winter\\nAll Season"
+  },
+  {
+   "fieldname": "upper_material",
+   "fieldtype": "Data",
+   "label": "Upper Material"
+  },
+  {
+   "fieldname": "sole_material",
+   "fieldtype": "Data",
+   "label": "Sole Material"
+  },
+  {
+   "fieldname": "size_run",
+   "fieldtype": "Link",
+   "label": "Size Run",
+   "options": "Footwear Size Run"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Style Image"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\\nActive\\nDiscontinued",
+   "default": "Draft",
+   "in_standard_filter": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "Footwear Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Footwear User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "import": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "engine": "InnoDB",
+ "autoname": "field:style_code",
+ "title_field": "style_name"
+}

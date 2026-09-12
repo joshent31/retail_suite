@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Footwear Warranty Claims Summary",
+ "module": "Footwear Management",
+ "ref_doctype": "Footwear Warranty Claim",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

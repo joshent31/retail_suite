@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Near Expiry Stock Alert",
+ "module": "Fmcg Management",
+ "ref_doctype": "FMCG Batch Expiry Tracker",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

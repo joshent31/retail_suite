@@ -1,0 +1,15 @@
+{
+ "doctype": "Report",
+ "name": "Footwear Stock by Size Run",
+ "module": "Footwear Management",
+ "ref_doctype": "Footwear Style Master",
+ "report_type": "Query Report",
+ "is_standard": "Yes",
+ "query": "SELECT\n  fsm.style_code as \"Style Code:Data:120\",\n  fsm.style_name as \"Style Name:Data:150\",\n  fsr.size_run_name as \"Size Run:Link/Footwear Size Run:150\",\n  fsm.item as \"Item:Link/Item:150\"\nFROM `tabFootwear Style Master` fsm\nLEFT JOIN `tabFootwear Size Run` fsr ON fsr.name = fsm.size_run\nWHERE fsm.status = \"Active\"",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

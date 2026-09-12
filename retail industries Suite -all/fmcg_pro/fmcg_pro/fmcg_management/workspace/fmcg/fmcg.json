@@ -1,0 +1,72 @@
+{
+ "doctype": "Workspace",
+ "name": "FMCG",
+ "label": "FMCG",
+ "title": "FMCG",
+ "module": "Fmcg Management",
+ "icon": "octicon octicon-graph",
+ "is_standard": 1,
+ "public": 1,
+ "sequence_id": 1.0,
+ "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">FMCG</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FMCG Batch Expiry Tracker\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FMCG Distributor Master\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FMCG Scheme Promotion\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FMCG Route Beat Plan\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FMCG Van Sales Entry\", \"col\": 3}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FMCG Retailer Visit Log\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Inventory & Schemes\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Field Sales\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "type": "DocType",
+   "label": "FMCG Batch Expiry Tracker",
+   "link_to": "FMCG Batch Expiry Tracker",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "FMCG Distributor Master",
+   "link_to": "FMCG Distributor Master",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "FMCG Scheme Promotion",
+   "link_to": "FMCG Scheme Promotion",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "FMCG Route Beat Plan",
+   "link_to": "FMCG Route Beat Plan",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "FMCG Van Sales Entry",
+   "link_to": "FMCG Van Sales Entry",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  },
+  {
+   "type": "DocType",
+   "label": "FMCG Retailer Visit Log",
+   "link_to": "FMCG Retailer Visit Log",
+   "doc_view": "List",
+   "icon": "list",
+   "color": "Grey",
+   "stats_filter": "{}"
+  }
+ ],
+ "links": [],
+ "charts": [],
+ "number_cards": [],
+ "quick_lists": []
+}

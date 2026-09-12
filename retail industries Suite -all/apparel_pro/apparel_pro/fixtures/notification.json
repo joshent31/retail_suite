@@ -1,0 +1,40 @@
+[
+ {
+  "doctype": "Notification",
+  "name": "Apparel Production Completed",
+  "subject": "Production Order {{ doc.name }} Completed",
+  "document_type": "Apparel Production Order",
+  "event": "Value Change",
+  "channel": "System Notification",
+  "condition": "doc.workflow_state == \"Completed\"",
+  "date_changed": "workflow_state",
+  "days_in_advance": null,
+  "message": "<p>Production Order {{ doc.name }} for style {{ doc.style }} has been marked Completed.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_document_field": "assigned_to"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Apparel QC Failed Alert",
+  "subject": "QC Failed: {{ doc.name }}",
+  "document_type": "Apparel Quality Inspection",
+  "event": "Submit",
+  "channel": "System Notification",
+  "condition": "doc.result == \"Fail\"",
+  "date_changed": null,
+  "days_in_advance": null,
+  "message": "<p>Quality Inspection {{ doc.name }} for production order {{ doc.production_order }} has FAILED. Defects found: {{ doc.defects_found }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Apparel Manager"
+   }
+  ],
+  "is_standard": 1
+ }
+]

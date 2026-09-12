@@ -1,0 +1,11 @@
+[
+ {
+  "doctype": "Print Format",
+  "name": "Project Estimate Quotation",
+  "doc_type": "Material Estimation",
+  "module": "Home Makeover Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Project Estimate Quotation</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Estimation No</b></td><td>{{ doc.name }}</td><td><b>Project</b></td><td>{{ doc.project }}</td></tr>\n    <tr><td><b>Total Estimated Cost</b></td><td colspan=\"3\">{{ doc.total_estimated_cost }}</td></tr>\n  </table>\n</div>"
+ }
+]

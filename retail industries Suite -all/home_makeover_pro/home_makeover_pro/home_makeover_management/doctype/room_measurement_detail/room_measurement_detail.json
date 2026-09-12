@@ -1,0 +1,50 @@
+{
+ "doctype": "DocType",
+ "name": "Room Measurement Detail",
+ "module": "Home Makeover Management",
+ "custom": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "label": "Room Name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item_area",
+   "fieldtype": "Data",
+   "label": "Area (e.g. Wall/Floor)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "length_ft",
+   "fieldtype": "Float",
+   "label": "Length (ft)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "width_ft",
+   "fieldtype": "Float",
+   "label": "Width (ft)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "height_ft",
+   "fieldtype": "Float",
+   "label": "Height (ft)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "area_sqft",
+   "fieldtype": "Float",
+   "label": "Area (sqft)",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "engine": "InnoDB"
+}

@@ -1,0 +1,15 @@
+{
+ "doctype": "Report",
+ "name": "Van Sales Summary by Route",
+ "module": "Fmcg Management",
+ "ref_doctype": "FMCG Van Sales Entry",
+ "report_type": "Query Report",
+ "is_standard": "Yes",
+ "query": "SELECT\n  fvs.route as \"Route:Link/FMCG Route Beat Plan:150\",\n  fvs.salesperson as \"Salesperson:Link/Employee:150\",\n  fvs.date as \"Date:Date:100\",\n  fvs.total_amount as \"Total Amount:Currency:130\",\n  fvs.payment_mode as \"Payment Mode:Data:100\"\nFROM `tabFMCG Van Sales Entry` fvs\nWHERE fvs.docstatus = 1\nORDER BY fvs.date DESC",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

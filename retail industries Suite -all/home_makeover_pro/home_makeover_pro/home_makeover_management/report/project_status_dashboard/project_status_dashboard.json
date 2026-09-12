@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Project Status Dashboard",
+ "module": "Home Makeover Management",
+ "ref_doctype": "Home Makeover Project",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "disabled": 0
+}

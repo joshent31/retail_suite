@@ -1,0 +1,75 @@
+{
+ "doctype": "DocType",
+ "name": "Lookbook",
+ "module": "Lifestyle Fashion Management",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "lookbook_name",
+   "fieldtype": "Data",
+   "label": "Lookbook Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "collection",
+   "fieldtype": "Link",
+   "label": "Collection",
+   "options": "Fashion Collection Master",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "looks",
+   "fieldtype": "Table",
+   "label": "Looks",
+   "options": "Lookbook Look Detail"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "Fashion Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Fashion Stylist",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "import": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "engine": "InnoDB",
+ "autoname": "hash"
+}

@@ -1,0 +1,96 @@
+{
+ "doctype": "DocType",
+ "name": "Footwear Vendor Rating",
+ "module": "Footwear Management",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rating_period",
+   "fieldtype": "Data",
+   "label": "Rating Period",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "quality_score",
+   "fieldtype": "Float",
+   "label": "Quality Score (/10)"
+  },
+  {
+   "fieldname": "delivery_score",
+   "fieldtype": "Float",
+   "label": "Delivery Score (/10)"
+  },
+  {
+   "fieldname": "price_score",
+   "fieldtype": "Float",
+   "label": "Price Score (/10)"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Float",
+   "label": "Overall Rating (/10)",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "Footwear Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "Footwear User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "import": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "engine": "InnoDB",
+ "autoname": "hash"
+}

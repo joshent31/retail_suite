@@ -1,0 +1,1 @@
+recursive-include home_makeover_pro *.json *.csv *.md *.txt *.html *.js *.css
