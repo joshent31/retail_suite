@@ -53,6 +53,11 @@ States: Proposed → Active → Completed (+ Cancelled)
 ### Print Format
 **Style Consultation Confirmation** for `Style Consultation Booking`
 
+### Automation & ERPNext integration
+- **Loyalty Points Ledger** computes running balances under a row lock (race-safe), blocks negative balances on submit, and auto-creates a reversal entry when a submitted entry is cancelled.
+- **Daily task** sweeps earned points past their expiry date into Expired entries.
+- **Number Card + Dashboard Chart** (active collaborations / by status) wired into the Lifestyle Fashion workspace.
+
 ---
 
 ## 3. Folder structure
@@ -156,5 +161,5 @@ always has full access to everything in this app regardless of these roles.
   needs company-wise reporting if you run a multi-company site.
 - Script reports live under `lifestyle_fashion_management/report/<name>/<name>.py` — extend
   the `execute()` function to add filters, charts, or summary rows.
-- The scheduled task stub in `tasks.py` (`scheduler_events > daily`) is a good
-  place to add automated jobs, e.g. re-computing expiry status or ageing.
+- Daily scheduled jobs in `tasks.py` (registered via `scheduler_events > daily`)
+  handle expiry recomputation, ageing alerts and similar automation for this app.

@@ -1,7 +1,6 @@
 # Copyright (c) 2026, Your Organization and contributors
 # For license information, please see license.txt
 
-import frappe
 
 
 def before_install():
@@ -18,15 +17,15 @@ def make_custom_fields():
 	create_custom_fields(
 		{
 			"Purchase Invoice": [
-				dict(
-					fieldname="accessories_consignment_stock",
-					label="Accessories Consignment Stock",
-					fieldtype="Link",
-					options="Accessory Consignment Stock",
-					insert_after="supplier",
-					print_hide=1,
-					no_copy=1,
-				)
+				{
+					"fieldname": "accessories_consignment_stock",
+					"label": "Accessories Consignment Stock",
+					"fieldtype": "Link",
+					"options": "Accessory Consignment Stock",
+					"insert_after": "supplier",
+					"print_hide": 1,
+					"no_copy": 1,
+				}
 			]
 		},
 		ignore_validate=True,

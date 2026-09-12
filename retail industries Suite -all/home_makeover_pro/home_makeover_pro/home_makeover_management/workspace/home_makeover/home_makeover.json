@@ -8,7 +8,7 @@
  "is_standard": 1,
  "public": 1,
  "sequence_id": 1.0,
- "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Home Makeover</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Home Makeover Project\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Room Measurement Sheet\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Material Estimation\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vendor Contractor Assignment\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Visit Log\", \"col\": 3}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Project Milestone Payment\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Projects\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Execution\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Home Makeover</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Home Makeover Project\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Room Measurement Sheet\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Material Estimation\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vendor Contractor Assignment\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Visit Log\", \"col\": 3}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Project Milestone Payment\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Projects\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Execution\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"nc0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Home Makeover Active Projects\", \"col\": 3}}, {\"id\": \"chart0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Home Makeover Projects by Status\", \"col\": 6}}]",
  "shortcuts": [
   {
    "type": "DocType",
@@ -66,7 +66,23 @@
   }
  ],
  "links": [],
- "charts": [],
- "number_cards": [],
+ "charts": [
+  {
+   "id": "chart0",
+   "chart_name": "Home Makeover Projects by Status",
+   "label": "Home Makeover Projects by Status",
+   "color": "#29CD42",
+   "type": "chart"
+  }
+ ],
+ "number_cards": [
+  {
+   "id": "nc0",
+   "number_card_name": "Home Makeover Active Projects",
+   "label": "Home Makeover Active Projects",
+   "color": "#ECAD4B",
+   "show_name": 1
+  }
+ ],
  "quick_lists": []
 }

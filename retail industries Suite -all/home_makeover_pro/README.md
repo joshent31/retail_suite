@@ -53,6 +53,14 @@ States: Lead → Consultation → Design → Approved → Execution → Complete
 ### Print Format
 **Project Estimate Quotation** for `Material Estimation`
 
+### Automation & ERPNext integration
+- **Create Sales Invoice** from the Pending milestones of a submitted Milestone Payment (project budget guard; milestones flip to Invoiced).
+- **Create Material Request** from submitted Material Estimations.
+- **Home Makeover Settings** singleton: default billing item for milestone invoices.
+- **Daily task** alerts on milestones due within 3 days or already overdue.
+- **Number Card + Dashboard Chart** (active projects / by status) wired into the Home Makeover workspace.
+- Validations: milestone percentages cannot exceed 100%, invoiced amounts cannot exceed the project budget.
+
 ---
 
 ## 3. Folder structure
@@ -156,5 +164,5 @@ always has full access to everything in this app regardless of these roles.
   needs company-wise reporting if you run a multi-company site.
 - Script reports live under `home_makeover_management/report/<name>/<name>.py` — extend
   the `execute()` function to add filters, charts, or summary rows.
-- The scheduled task stub in `tasks.py` (`scheduler_events > daily`) is a good
-  place to add automated jobs, e.g. re-computing expiry status or ageing.
+- Daily scheduled jobs in `tasks.py` (registered via `scheduler_events > daily`)
+  handle expiry recomputation, ageing alerts and similar automation for this app.

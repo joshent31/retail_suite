@@ -24,9 +24,12 @@ class AccessoryConsignmentStock(Document):
 
 	def on_update(self):
 		# roll the workflow forward automatically when everything is sold
-		if self.docstatus == 1 and self.workflow_state in ("Received", "Partially Sold"):
-			if all(flt(d.qty_sold) >= flt(d.qty) for d in self.items):
-				frappe.db.set_value(
+		if (
+			self.docstatus == 1
+			and self.workflow_state in ("Received", "Partially Sold")
+			and all(flt(d.qty_sold) >= flt(d.qty) for d in self.items)
+		):
+			frappe.db.set_value(
 					"Accessory Consignment Stock", self.name, "workflow_state", "Partially Sold"
 				)
 

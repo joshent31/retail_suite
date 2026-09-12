@@ -1,7 +1,6 @@
 # Copyright (c) 2026, Your Organization and contributors
 # For license information, please see license.txt
 
-import frappe
 
 
 def before_install():
@@ -18,15 +17,15 @@ def make_custom_fields():
 	create_custom_fields(
 		{
 			"Sales Invoice": [
-				dict(
-					fieldname="home_makeover_milestone_payment",
-					label="Home Makeover Milestone Payment",
-					fieldtype="Link",
-					options="Project Milestone Payment",
-					insert_after="customer",
-					print_hide=1,
-					no_copy=1,
-				)
+				{
+					"fieldname": "home_makeover_milestone_payment",
+					"label": "Home Makeover Milestone Payment",
+					"fieldtype": "Link",
+					"options": "Project Milestone Payment",
+					"insert_after": "customer",
+					"print_hide": 1,
+					"no_copy": 1,
+				}
 			]
 		},
 		ignore_validate=True,

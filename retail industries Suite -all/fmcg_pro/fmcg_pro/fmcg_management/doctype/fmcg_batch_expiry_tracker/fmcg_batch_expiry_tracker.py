@@ -2,10 +2,9 @@
 # For license information, please see license.txt
 
 import frappe
+from fmcg_pro.fmcg_pro.utils import get_expiry_status
 from frappe.model.document import Document
 from frappe.utils import date_diff, nowdate
-
-from fmcg_pro.fmcg_pro.utils import get_expiry_status
 
 
 class FMCGBatchExpiryTracker(Document):

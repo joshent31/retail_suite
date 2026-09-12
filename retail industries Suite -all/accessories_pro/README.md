@@ -52,6 +52,13 @@ States: Received → Partially Sold → Settled / Returned
 ### Print Format
 **Consignment Note** for `Accessory Consignment Stock`
 
+### Automation & ERPNext integration
+- **Settle with Supplier** button creates a Purchase Invoice for the sold consignment quantities and marks the consignment Settled (traceability via a custom field on Purchase Invoice).
+- **Check Stock Availability** on bundles: computes how many bundles current ERPNext stock can fulfil.
+- **Daily task** flags consignments unsold for 30+ days (ageing).
+- **Number Card + Dashboard Chart** (active consignments / by status) wired into the Accessories workspace.
+- Validations: duplicate/zero-qty components rejected, Qty Sold cannot exceed Qty, Qty Remaining auto-computed.
+
 ---
 
 ## 3. Folder structure
@@ -155,5 +162,5 @@ always has full access to everything in this app regardless of these roles.
   needs company-wise reporting if you run a multi-company site.
 - Script reports live under `accessories_management/report/<name>/<name>.py` — extend
   the `execute()` function to add filters, charts, or summary rows.
-- The scheduled task stub in `tasks.py` (`scheduler_events > daily`) is a good
-  place to add automated jobs, e.g. re-computing expiry status or ageing.
+- Daily scheduled jobs in `tasks.py` (registered via `scheduler_events > daily`)
+  handle expiry recomputation, ageing alerts and similar automation for this app.

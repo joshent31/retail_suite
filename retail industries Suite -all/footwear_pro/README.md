@@ -53,6 +53,13 @@ States: Open → Under Review → Approved/Rejected → Resolved
 ### Print Format
 **Warranty Claim Certificate** for `Footwear Warranty Claim`
 
+### Automation & ERPNext integration
+- **Warranty window** auto-computed from Purchase Date + Warranty Months; claims outside the window are blocked unless explicitly overridden.
+- **Create Delivery Note** button for approved warranty claims (zero-rated replacement).
+- **Daily task** nudges the Footwear Manager about claims open longer than 7 days.
+- **Number Card + Dashboard Chart** (open claims / claims by status) wired into the Footwear workspace.
+- Validations: defects cannot exceed sample size.
+
 ---
 
 ## 3. Folder structure
@@ -156,5 +163,5 @@ always has full access to everything in this app regardless of these roles.
   needs company-wise reporting if you run a multi-company site.
 - Script reports live under `footwear_management/report/<name>/<name>.py` — extend
   the `execute()` function to add filters, charts, or summary rows.
-- The scheduled task stub in `tasks.py` (`scheduler_events > daily`) is a good
-  place to add automated jobs, e.g. re-computing expiry status or ageing.
+- Daily scheduled jobs in `tasks.py` (registered via `scheduler_events > daily`)
+  handle expiry recomputation, ageing alerts and similar automation for this app.

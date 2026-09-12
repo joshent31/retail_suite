@@ -11,12 +11,18 @@ class ApparelProductionOrder(Document):
 	def validate(self):
 		if flt(self.qty_to_produce) <= 0:
 			frappe.throw(_("Qty to Produce must be greater than zero"))
-		if self.sewing_completion_date and self.cutting_date:
-			if self.sewing_completion_date < self.cutting_date:
-				frappe.throw(_("Sewing Completion Date cannot be before Cutting Date"))
-		if self.packing_date and self.sewing_completion_date:
-			if self.packing_date < self.sewing_completion_date:
-				frappe.throw(_("Packing Date cannot be before Sewing Completion Date"))
+		if (
+			self.sewing_completion_date
+			and self.cutting_date
+			and self.sewing_completion_date < self.cutting_date
+		):
+			frappe.throw(_("Sewing Completion Date cannot be before Cutting Date"))
+		if (
+			self.packing_date
+			and self.sewing_completion_date
+			and self.packing_date < self.sewing_completion_date
+		):
+			frappe.throw(_("Packing Date cannot be before Sewing Completion Date"))
 		self.calculate_fabric_requirement()
 
 	def calculate_fabric_requirement(self):

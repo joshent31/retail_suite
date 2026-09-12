@@ -52,6 +52,13 @@ States: Draft → Cutting → Sewing → Finishing → Packed → Completed (+ C
 ### Print Format
 **Apparel Production Order Slip** for `Apparel Production Order`
 
+### Automation & ERPNext integration
+- **Fabric requirement** auto-calculated as `Qty x Consumption x (1 + Wastage%)` on every save (client + server).
+- **Create Stock Entry** button on submitted Production Orders (Manufacture type, linked via a custom field on Stock Entry).
+- **Daily task** flags overdue production orders and emails the Apparel Manager role.
+- **Number Card + Dashboard Chart** (open orders / orders by status) wired into the Apparel workspace.
+- Validations: Cutting < Sewing < Packing date sequence, defects-vs-sample-size, critical defects force a Fail, duplicate active returns blocked.
+
 ---
 
 ## 3. Folder structure
@@ -155,5 +162,5 @@ always has full access to everything in this app regardless of these roles.
   needs company-wise reporting if you run a multi-company site.
 - Script reports live under `apparel_management/report/<name>/<name>.py` — extend
   the `execute()` function to add filters, charts, or summary rows.
-- The scheduled task stub in `tasks.py` (`scheduler_events > daily`) is a good
-  place to add automated jobs, e.g. re-computing expiry status or ageing.
+- Daily scheduled jobs in `tasks.py` (registered via `scheduler_events > daily`)
+  handle expiry recomputation, ageing alerts and similar automation for this app.

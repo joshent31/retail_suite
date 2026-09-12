@@ -8,7 +8,7 @@
  "is_standard": 1,
  "public": 1,
  "sequence_id": 1.0,
- "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Footwear</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Style Master\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Material BOM\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear QC Inspection\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Warranty Claim\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Vendor Rating\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Masters\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Quality & Warranty\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "content": "[{\"id\": \"header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Footwear</span>\", \"col\": 12}}, {\"id\": \"sc0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Style Master\", \"col\": 3}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Material BOM\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear QC Inspection\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Warranty Claim\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Footwear Vendor Rating\", \"col\": 3}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"Masters\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Quality & Warranty\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"nc0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Footwear Open Warranty Claims\", \"col\": 3}}, {\"id\": \"chart0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Footwear Claims by Status\", \"col\": 6}}]",
  "shortcuts": [
   {
    "type": "DocType",
@@ -57,7 +57,23 @@
   }
  ],
  "links": [],
- "charts": [],
- "number_cards": [],
+ "charts": [
+  {
+   "id": "chart0",
+   "chart_name": "Footwear Claims by Status",
+   "label": "Footwear Claims by Status",
+   "color": "#29CD42",
+   "type": "chart"
+  }
+ ],
+ "number_cards": [
+  {
+   "id": "nc0",
+   "number_card_name": "Footwear Open Warranty Claims",
+   "label": "Footwear Open Warranty Claims",
+   "color": "#ECAD4B",
+   "show_name": 1
+  }
+ ],
  "quick_lists": []
 }

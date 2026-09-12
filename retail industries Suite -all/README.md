@@ -83,12 +83,15 @@ Repeat for each of the other five folders with their own remotes.
   per site.
 - **Role → User assignment** — the fixtures create the Roles; assigning them
   to actual users is a per-deployment step (Setup > User).
-- **Client-side UX polish** — each parent DocType ships a minimal `.js` form
-  script (`refresh(frm) {}`) as an extension point; dashboards, custom
-  buttons, and field-level scripting are intentionally left open rather than
-  guessed at.
-- **CI/CD** — no GitHub Actions/pre-commit config is included; add your
-  bench's standard lint/test pipeline per repo if you use one.
+- **Buttons & integrations (built in)** — every app ships working actions
+  (Create Stock Entry / Sales Invoice / Delivery Note / Material Request,
+  Settle with Supplier, bundle stock checks), Settings singletons, daily
+  scheduled jobs, and number cards + dashboard charts on each workspace.
+  Each app's README lists exactly what it automates.
+- **CI/CD (built in)** — this repository includes a GitHub Actions workflow
+  (ruff lint + Python compile check + JSON validation) and a pre-commit
+  config; run `pip install pre-commit && pre-commit install` to enable it
+  locally.
 
 ## Full detail
 

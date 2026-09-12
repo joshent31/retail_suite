@@ -1,10 +1,8 @@
 # Copyright (c) 2026, Your Organization and contributors
 # For license information, please see license.txt
 
-import frappe
-from frappe.tests.utils import FrappeTestCase
-
 from fmcg_pro.fmcg_pro.utils import get_expiry_status
+from frappe.tests.utils import FrappeTestCase
 
 
 class TestFMCGBatchExpiryTracker(FrappeTestCase):

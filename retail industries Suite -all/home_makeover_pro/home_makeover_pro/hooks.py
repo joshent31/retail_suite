@@ -1,4 +1,3 @@
-from . import __version__ as app_version
 
 app_name = "home_makeover_pro"
 app_title = "Home Makeover Pro"

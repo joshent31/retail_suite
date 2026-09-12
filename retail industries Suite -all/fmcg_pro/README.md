@@ -53,6 +53,12 @@ States: Draft → Approved → Active → Expired
 ### Print Format
 **Van Sales Invoice** for `FMCG Van Sales Entry`
 
+### Automation & ERPNext integration
+- **Create Sales Invoice** button on submitted Van Sales Entries (mapped item by item).
+- **FMCG Pro Settings** singleton: near-expiry threshold (days), alert toggle, default van warehouse.
+- **Daily task** recomputes stale batch expiry statuses and emails a near-expiry/expired table to the FMCG Manager role.
+- **Number Card + Dashboard Chart** (near-expiry batches / by status) wired into the FMCG workspace.
+
 ---
 
 ## 3. Folder structure
@@ -156,5 +162,5 @@ always has full access to everything in this app regardless of these roles.
   needs company-wise reporting if you run a multi-company site.
 - Script reports live under `fmcg_management/report/<name>/<name>.py` — extend
   the `execute()` function to add filters, charts, or summary rows.
-- The scheduled task stub in `tasks.py` (`scheduler_events > daily`) is a good
-  place to add automated jobs, e.g. re-computing expiry status or ageing.
+- Daily scheduled jobs in `tasks.py` (registered via `scheduler_events > daily`)
+  handle expiry recomputation, ageing alerts and similar automation for this app.

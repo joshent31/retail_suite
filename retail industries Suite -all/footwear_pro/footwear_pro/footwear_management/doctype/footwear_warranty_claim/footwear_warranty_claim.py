@@ -34,10 +34,12 @@ class FootwearWarrantyClaim(Document):
 	def validate_replacement(self):
 		if self.workflow_state == "Approved" and not self.replacement_item:
 			frappe.throw(_("Replacement Item is required to approve a warranty claim"))
-		if self.replacement_item and self.replacement_item == self.item:
-			# allowed, but replacement must exist
-			if not frappe.db.exists("Item", self.replacement_item):
-				frappe.throw(_("Replacement Item {0} does not exist").format(self.replacement_item))
+		if (
+			self.replacement_item
+			and self.replacement_item == self.item
+			and not frappe.db.exists("Item", self.replacement_item)
+		):
+			frappe.throw(_("Replacement Item {0} does not exist").format(self.replacement_item))
 
 
 @frappe.whitelist()
