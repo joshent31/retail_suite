@@ -2,7 +2,7 @@ from . import __version__ as app_version
 
 app_name = "lifestyle_fashion_pro"
 app_title = "Lifestyle & Fashion Pro"
-app_publisher = "Your Organization"
+app_publisher = "Retail Industry Suite"
 app_description = "Collections, influencer collaborations, trend boards, lookbooks, loyalty points and style consultations for lifestyle/fashion retail on ERPNext."
 app_email = "admin@example.com"
 app_license = "MIT"
@@ -21,6 +21,8 @@ fixtures = [
 	{"dt": "Notification", "filters": [["module", "=", "Lifestyle Fashion Management"]]},
 	{"dt": "Workflow", "filters": [["document_type", "in", ['Influencer Brand Collaboration']]]},
 	{"dt": "Print Format", "filters": [["module", "=", "Lifestyle Fashion Management"]]},
+	{"dt": "Number Card", "filters": [["name", "in", ['Lifestyle Active Collaborations']]]},
+	{"dt": "Dashboard Chart", "filters": [["name", "in", ['Lifestyle Collaborations by Status']]]},
 ]
 
 # Installation
@@ -30,18 +32,16 @@ fixtures = [
 
 # Document Events
 # ----------------
-# Hook on document methods and events
-#
-# doc_events = {
-# 	"*": {
-# 		"on_update": "lifestyle_fashion_pro.utils.on_doc_update"
-# 	}
-# }
+doc_events = {
+	"Influencer Brand Collaboration": {
+		"on_update": "lifestyle_fashion_pro.lifestyle_fashion_pro.utils.sync_workflow_status",
+	}
+}
 
 # Scheduled Tasks
 # ----------------
 scheduler_events = {
 	"daily": [
-		"lifestyle_fashion_pro.tasks.daily"
+		"lifestyle_fashion_pro.lifestyle_fashion_pro.tasks.daily"
 	]
 }

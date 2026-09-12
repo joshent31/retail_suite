@@ -5,10 +5,16 @@
  "ref_doctype": "Accessory Item Bundle",
  "report_type": "Query Report",
  "is_standard": "Yes",
- "query": "SELECT\n  aib.bundle_name as \"Bundle:Data:150\",\n  aib.bundle_item as \"Bundle Item:Link/Item:150\",\n  aib.bundle_price as \"Bundle Price:Currency:120\",\n  COALESCE(SUM(sii.qty), 0) as \"Qty Sold:Float:100\"\nFROM `tabAccessory Item Bundle` aib\nLEFT JOIN `tabSales Invoice Item` sii\n  ON sii.item_code = aib.bundle_item\nLEFT JOIN `tabSales Invoice` si ON si.name = sii.parent AND si.docstatus = 1\nGROUP BY aib.name\nORDER BY SUM(sii.qty) DESC",
+ "query": "SELECT\n  aib.bundle_name as \"Bundle:Data:150\",\n  aib.bundle_item as \"Bundle Item:Link/Item:150\",\n  aib.bundle_price as \"Bundle Price:Currency:120\",\n  COALESCE(SUM(sii.qty), 0) as \"Qty Sold:Float:100\"\nFROM `tabAccessory Item Bundle` aib\nLEFT JOIN `tabSales Invoice Item` sii\n  ON sii.item_code = aib.bundle_item\nLEFT JOIN `tabSales Invoice` si ON si.name = sii.parent AND si.docstatus = 1\nWHERE (%(from_date)s IS NULL OR %(from_date)s = '' OR si.posting_date >= %(from_date)s)\nAND (%(to_date)s IS NULL OR %(to_date)s = '' OR si.posting_date <= %(to_date)s)\nGROUP BY aib.name\nORDER BY SUM(sii.qty) DESC",
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Accessories Manager"
+  },
+  {
+   "role": "Accessories User"
   }
  ],
  "disabled": 0

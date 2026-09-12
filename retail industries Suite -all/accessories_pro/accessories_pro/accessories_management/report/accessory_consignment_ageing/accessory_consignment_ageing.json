@@ -8,6 +8,12 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Accessories Manager"
+  },
+  {
+   "role": "Accessories User"
   }
  ],
  "disabled": 0

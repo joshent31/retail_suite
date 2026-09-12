@@ -24,6 +24,20 @@
    "in_list_view": 1
   },
   {
+   "fieldname": "billing_item",
+   "fieldtype": "Link",
+   "label": "Billing Item",
+   "options": "Item",
+   "description": "Service item used on the Sales Invoice created from these milestones."
+  },
+  {
+   "fieldname": "latest_invoice",
+   "fieldtype": "Link",
+   "label": "Latest Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
    "fieldname": "milestones",
    "fieldtype": "Table",
    "label": "Milestones",

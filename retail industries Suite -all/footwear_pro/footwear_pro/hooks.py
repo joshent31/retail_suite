@@ -2,7 +2,7 @@ from . import __version__ as app_version
 
 app_name = "footwear_pro"
 app_title = "Footwear Pro"
-app_publisher = "Your Organization"
+app_publisher = "Retail Industry Suite"
 app_description = "Style masters, size runs, material BOM, QC, warranty claims and vendor ratings for footwear retail on ERPNext."
 app_email = "admin@example.com"
 app_license = "MIT"
@@ -21,6 +21,8 @@ fixtures = [
 	{"dt": "Notification", "filters": [["module", "=", "Footwear Management"]]},
 	{"dt": "Workflow", "filters": [["document_type", "in", ['Footwear Warranty Claim']]]},
 	{"dt": "Print Format", "filters": [["module", "=", "Footwear Management"]]},
+	{"dt": "Number Card", "filters": [["name", "in", ['Footwear Open Warranty Claims']]]},
+	{"dt": "Dashboard Chart", "filters": [["name", "in", ['Footwear Claims by Status']]]},
 ]
 
 # Installation
@@ -30,18 +32,16 @@ fixtures = [
 
 # Document Events
 # ----------------
-# Hook on document methods and events
-#
-# doc_events = {
-# 	"*": {
-# 		"on_update": "footwear_pro.utils.on_doc_update"
-# 	}
-# }
+doc_events = {
+	"Footwear Warranty Claim": {
+		"on_update": "footwear_pro.footwear_pro.utils.sync_workflow_status",
+	}
+}
 
 # Scheduled Tasks
 # ----------------
 scheduler_events = {
 	"daily": [
-		"footwear_pro.tasks.daily"
+		"footwear_pro.footwear_pro.tasks.daily"
 	]
 }

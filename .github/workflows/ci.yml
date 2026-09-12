@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Ruff lint (all apps)
+        run: ruff check .
+
+      - name: Compile all Python sources
+        run: python -m compileall -q "retail industries Suite -all"
+
+  json-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate JSON files
+        run: python - <<'EOF'
+import json, glob, sys
+bad = 0
+for p in glob.glob("retail industries Suite -all/**/*.json", recursive=True):
+    try:
+        with open(p, encoding="utf-8") as f:
+            json.load(f)
+    except Exception as e:
+        bad += 1
+        print("INVALID:", p, e)
+sys.exit(1 if bad else 0)
+EOF

@@ -1,0 +1,39 @@
+{
+ "doctype": "DocType",
+ "name": "Home Makeover Settings",
+ "module": "Home Makeover Management",
+ "custom": 0,
+ "istable": 0,
+ "issingle": 1,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Milestone Billing"
+  },
+  {
+   "fieldname": "default_billing_item",
+   "fieldtype": "Link",
+   "label": "Default Billing Item",
+   "options": "Item",
+   "description": "Service item used when creating Sales Invoices from milestone payments."
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Home Makeover Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "engine": "InnoDB"
+}

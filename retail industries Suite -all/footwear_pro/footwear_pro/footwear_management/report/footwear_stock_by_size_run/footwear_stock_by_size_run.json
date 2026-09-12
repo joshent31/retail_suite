@@ -5,10 +5,16 @@
  "ref_doctype": "Footwear Style Master",
  "report_type": "Query Report",
  "is_standard": "Yes",
- "query": "SELECT\n  fsm.style_code as \"Style Code:Data:120\",\n  fsm.style_name as \"Style Name:Data:150\",\n  fsr.size_run_name as \"Size Run:Link/Footwear Size Run:150\",\n  fsm.item as \"Item:Link/Item:150\"\nFROM `tabFootwear Style Master` fsm\nLEFT JOIN `tabFootwear Size Run` fsr ON fsr.name = fsm.size_run\nWHERE fsm.status = \"Active\"",
+ "query": "SELECT\n  fsm.style_code as \"Style Code:Data:120\",\n  fsm.style_name as \"Style Name:Data:150\",\n  fsr.size_run_name as \"Size Run:Link/Footwear Size Run:150\",\n  fsm.item as \"Item:Link/Item:150\"\nFROM `tabFootwear Style Master` fsm\nLEFT JOIN `tabFootwear Size Run` fsr ON fsr.name = fsm.size_run\nWHERE fsm.status = \"Active\"\nAND (%(style)s IS NULL OR %(style)s = '' OR fsm.name = %(style)s)\nORDER BY fsm.style_code",
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Footwear Manager"
+  },
+  {
+   "role": "Footwear User"
   }
  ],
  "disabled": 0

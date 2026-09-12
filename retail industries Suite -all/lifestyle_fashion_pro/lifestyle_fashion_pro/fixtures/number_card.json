@@ -1,0 +1,13 @@
+[
+ {
+  "doctype": "Number Card",
+  "name": "Lifestyle Active Collaborations",
+  "label": "Active Influencer Collaborations",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Influencer Brand Collaboration",
+  "filters_json": "[[\"docstatus\", \"=\", 0], [\"workflow_state\", \"not in\", [\"Completed\", \"Cancelled\"]]]",
+  "is_public": 1
+ }
+]

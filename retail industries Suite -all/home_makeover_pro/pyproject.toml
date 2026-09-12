@@ -1,7 +1,7 @@
 [project]
 name = "home_makeover_pro"
 authors = [
-    { name = "Your Organization", email = "admin@example.com"}
+    { name = "Retail Industry Suite", email = "admin@example.com"}
 ]
 description = "End-to-end project tracking, room measurements, material estimation, contractor assignment and milestone billing for home makeover/interiors businesses on ERPNext."
 requires-python = ">=3.10"

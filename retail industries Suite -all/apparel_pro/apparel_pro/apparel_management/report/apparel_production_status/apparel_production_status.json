@@ -8,6 +8,12 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Apparel Manager"
+  },
+  {
+   "role": "Apparel User"
   }
  ],
  "disabled": 0

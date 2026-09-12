@@ -1,0 +1,13 @@
+[
+ {
+  "doctype": "Number Card",
+  "name": "Accessories Active Consignments",
+  "label": "Active Consignments",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Accessory Consignment Stock",
+  "filters_json": "[[\"docstatus\", \"=\", 1], [\"workflow_state\", \"in\", [\"Received\", \"Partially Sold\"]]]",
+  "is_public": 1
+ }
+]

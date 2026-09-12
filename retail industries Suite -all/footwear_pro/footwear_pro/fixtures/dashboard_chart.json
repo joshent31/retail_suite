@@ -1,0 +1,13 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Footwear Claims by Status",
+  "chart_name": "Warranty Claims by Status",
+  "chart_type": "Group By",
+  "document_type": "Footwear Warranty Claim",
+  "group_by_type": "Count",
+  "based_on": "workflow_state",
+  "time_interval": "Daily",
+  "is_public": 1
+ }
+]

@@ -54,6 +54,14 @@
    "fieldtype": "Select",
    "label": "Payment Mode",
    "options": "Cash\\nUPI\\nCredit"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "in_list_view": 0
   }
  ],
  "permissions": [

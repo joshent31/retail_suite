@@ -55,6 +55,19 @@
    "fieldtype": "Int",
    "label": "Balance Points",
    "read_only": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "reversal_of",
+   "fieldtype": "Link",
+   "label": "Reversal Of",
+   "options": "Loyalty Points Ledger",
+   "read_only": 1
   }
  ],
  "permissions": [

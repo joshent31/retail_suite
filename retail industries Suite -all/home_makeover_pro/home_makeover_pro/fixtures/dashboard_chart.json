@@ -1,0 +1,13 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Home Makeover Projects by Status",
+  "chart_name": "Projects by Status",
+  "chart_type": "Group By",
+  "document_type": "Home Makeover Project",
+  "group_by_type": "Count",
+  "based_on": "workflow_state",
+  "time_interval": "Daily",
+  "is_public": 1
+ }
+]

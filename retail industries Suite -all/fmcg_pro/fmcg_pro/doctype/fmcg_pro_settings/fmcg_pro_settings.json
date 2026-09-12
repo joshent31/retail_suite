@@ -1,0 +1,62 @@
+{
+ "doctype": "DocType",
+ "name": "FMCG Pro Settings",
+ "module": "Fmcg Management",
+ "custom": 0,
+ "istable": 0,
+ "issingle": 1,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "fields": [
+  {
+   "fieldname": "expiry_section",
+   "fieldtype": "Section Break",
+   "label": "Batch Expiry"
+  },
+  {
+   "fieldname": "near_expiry_days",
+   "fieldtype": "Int",
+   "label": "Near Expiry Threshold (days)",
+   "default": 30,
+   "description": "Batches expiring within this many days are flagged 'Near Expiry' by the daily job."
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alert_near_expiry",
+   "fieldtype": "Check",
+   "label": "Email Near-Expiry Alert",
+   "default": 1,
+   "description": "Daily email to FMCG Manager role listing near-expiry/expired batches."
+  },
+  {
+   "fieldname": "van_sales_section",
+   "fieldtype": "Section Break",
+   "label": "Van Sales"
+  },
+  {
+   "fieldname": "default_van_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Van Sales Warehouse",
+   "options": "Warehouse",
+   "description": "Warehouse used for stock deduction when creating a Sales Invoice from a Van Sales Entry."
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FMCG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "engine": "InnoDB"
+}

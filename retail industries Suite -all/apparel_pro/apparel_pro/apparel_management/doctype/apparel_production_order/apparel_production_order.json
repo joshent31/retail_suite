@@ -60,6 +60,12 @@
    "label": "Wastage %"
   },
   {
+   "fieldname": "total_fabric_required",
+   "fieldtype": "Float",
+   "label": "Total Fabric Required (m)",
+   "read_only": 1
+  },
+  {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break",
    "label": ""

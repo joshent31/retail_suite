@@ -8,6 +8,12 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "FMCG Manager"
+  },
+  {
+   "role": "FMCG User"
   }
  ],
  "disabled": 0

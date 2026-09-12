@@ -5,10 +5,16 @@
  "ref_doctype": "Project Milestone Payment",
  "report_type": "Query Report",
  "is_standard": "Yes",
- "query": "SELECT\n  pmp.project as \"Project:Link/Home Makeover Project:150\",\n  pmd.milestone_name as \"Milestone:Data:150\",\n  pmd.due_date as \"Due Date:Date:100\",\n  pmd.amount as \"Amount:Currency:120\",\n  pmd.status as \"Status:Data:100\"\nFROM `tabProject Milestone Detail` pmd\nJOIN `tabProject Milestone Payment` pmp ON pmp.name = pmd.parent\nORDER BY pmd.due_date ASC",
+ "query": "SELECT\n  pmp.project as \"Project:Link/Home Makeover Project:150\",\n  pmd.milestone_name as \"Milestone:Data:150\",\n  pmd.due_date as \"Due Date:Date:100\",\n  pmd.amount as \"Amount:Currency:120\",\n  pmd.status as \"Status:Data:100\"\nFROM `tabProject Milestone Detail` pmd\nJOIN `tabProject Milestone Payment` pmp ON pmp.name = pmd.parent\nWHERE (%(status)s IS NULL OR %(status)s = '' OR pmd.status = %(status)s)\nAND (%(project)s IS NULL OR %(project)s = '' OR pmp.project = %(project)s)\nORDER BY pmd.due_date ASC",
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Home Makeover Manager"
+  },
+  {
+   "role": "Home Makeover Designer"
   }
  ],
  "disabled": 0

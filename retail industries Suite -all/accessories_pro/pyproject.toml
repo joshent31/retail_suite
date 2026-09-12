@@ -1,7 +1,7 @@
 [project]
 name = "accessories_pro"
 authors = [
-    { name = "Your Organization", email = "admin@example.com"}
+    { name = "Retail Industry Suite", email = "admin@example.com"}
 ]
 description = "Category masters, item bundles, material composition, consignment stock and returns for accessories retail on ERPNext."
 requires-python = ">=3.10"

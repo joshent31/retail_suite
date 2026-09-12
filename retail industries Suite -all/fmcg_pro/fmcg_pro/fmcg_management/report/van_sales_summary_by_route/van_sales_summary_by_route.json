@@ -5,10 +5,16 @@
  "ref_doctype": "FMCG Van Sales Entry",
  "report_type": "Query Report",
  "is_standard": "Yes",
- "query": "SELECT\n  fvs.route as \"Route:Link/FMCG Route Beat Plan:150\",\n  fvs.salesperson as \"Salesperson:Link/Employee:150\",\n  fvs.date as \"Date:Date:100\",\n  fvs.total_amount as \"Total Amount:Currency:130\",\n  fvs.payment_mode as \"Payment Mode:Data:100\"\nFROM `tabFMCG Van Sales Entry` fvs\nWHERE fvs.docstatus = 1\nORDER BY fvs.date DESC",
+ "query": "SELECT\n  fvs.route as \"Route:Link/FMCG Route Beat Plan:150\",\n  fvs.salesperson as \"Salesperson:Link/Employee:150\",\n  fvs.date as \"Date:Date:100\",\n  fvs.total_amount as \"Total Amount:Currency:130\",\n  fvs.payment_mode as \"Payment Mode:Data:100\"\nFROM `tabFMCG Van Sales Entry` fvs\nWHERE fvs.docstatus = 1\nAND (%(from_date)s IS NULL OR %(from_date)s = '' OR fvs.date >= %(from_date)s)\nAND (%(to_date)s IS NULL OR %(to_date)s = '' OR fvs.date <= %(to_date)s)\nAND (%(route)s IS NULL OR %(route)s = '' OR fvs.route = %(route)s)\nAND (%(salesperson)s IS NULL OR %(salesperson)s = '' OR fvs.salesperson = %(salesperson)s)\nORDER BY fvs.date DESC",
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "FMCG Manager"
+  },
+  {
+   "role": "FMCG User"
   }
  ],
  "disabled": 0

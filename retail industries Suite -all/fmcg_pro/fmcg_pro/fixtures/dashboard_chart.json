@@ -1,0 +1,13 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "name": "FMCG Batches by Status",
+  "chart_name": "Batches by Expiry Status",
+  "chart_type": "Group By",
+  "document_type": "FMCG Batch Expiry Tracker",
+  "group_by_type": "Count",
+  "based_on": "status",
+  "time_interval": "Daily",
+  "is_public": 1
+ }
+]

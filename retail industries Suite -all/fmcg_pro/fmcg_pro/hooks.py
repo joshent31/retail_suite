@@ -2,7 +2,7 @@ from . import __version__ as app_version
 
 app_name = "fmcg_pro"
 app_title = "FMCG Pro"
-app_publisher = "Your Organization"
+app_publisher = "Retail Industry Suite"
 app_description = "Batch/expiry tracking, distributor master, trade schemes, route/beat planning and van sales for FMCG distribution on ERPNext."
 app_email = "admin@example.com"
 app_license = "MIT"
@@ -18,9 +18,11 @@ required_apps = ["frappe/erpnext"]
 # Exported as data via `bench --site [site] export-fixtures`
 fixtures = [
 	{"dt": "Role", "filters": [["name", "in", ['FMCG Manager', 'FMCG User']]]},
-	{"dt": "Notification", "filters": [["module", "=", "FMCG Management"]]},
+	{"dt": "Notification", "filters": [["module", "=", "Fmcg Management"]]},
 	{"dt": "Workflow", "filters": [["document_type", "in", ['FMCG Scheme Promotion']]]},
-	{"dt": "Print Format", "filters": [["module", "=", "FMCG Management"]]},
+	{"dt": "Print Format", "filters": [["module", "=", "Fmcg Management"]]},
+	{"dt": "Number Card", "filters": [["name", "in", ['FMCG Near Expiry Batches']]]},
+	{"dt": "Dashboard Chart", "filters": [["name", "in", ['FMCG Batches by Status']]]},
 ]
 
 # Installation
@@ -30,18 +32,16 @@ fixtures = [
 
 # Document Events
 # ----------------
-# Hook on document methods and events
-#
-# doc_events = {
-# 	"*": {
-# 		"on_update": "fmcg_pro.utils.on_doc_update"
-# 	}
-# }
+doc_events = {
+	"FMCG Scheme Promotion": {
+		"on_update": "fmcg_pro.fmcg_pro.utils.sync_workflow_status",
+	}
+}
 
 # Scheduled Tasks
 # ----------------
 scheduler_events = {
 	"daily": [
-		"fmcg_pro.tasks.daily"
+		"fmcg_pro.fmcg_pro.tasks.daily"
 	]
 }

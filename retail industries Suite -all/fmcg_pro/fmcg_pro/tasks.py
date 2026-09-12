@@ -1,6 +1,6 @@
+# Copyright (c) 2026, Your Organization and contributors
+# For license information, please see license.txt
+
 import frappe
 
-
-def daily():
-	"""Placeholder for scheduled daily jobs (e.g. expiry checks, ageing alerts)."""
-	pass
+from fmcg_pro.fmcg_pro.utils import daily  # noqa: F401  (re-exported for hooks)

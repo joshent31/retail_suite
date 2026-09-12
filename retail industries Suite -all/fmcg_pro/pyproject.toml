@@ -1,7 +1,7 @@
 [project]
 name = "fmcg_pro"
 authors = [
-    { name = "Your Organization", email = "admin@example.com"}
+    { name = "Retail Industry Suite", email = "admin@example.com"}
 ]
 description = "Batch/expiry tracking, distributor master, trade schemes, route/beat planning and van sales for FMCG distribution on ERPNext."
 requires-python = ">=3.10"
