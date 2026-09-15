@@ -8,6 +8,7 @@
   "group_by_type": "Count",
   "group_by_based_on": "status",
   "time_interval": "Daily",
+  "filters_json": "[]",
   "is_public": 1
  },
  {
@@ -19,6 +20,7 @@
   "group_by_type": "Count",
   "group_by_based_on": "workflow_state",
   "time_interval": "Daily",
+  "filters_json": "[]",
   "is_public": 1
  },
  {
@@ -30,6 +32,7 @@
   "group_by_type": "Count",
   "group_by_based_on": "workflow_state",
   "time_interval": "Daily",
+  "filters_json": "[]",
   "is_public": 1
  },
  {
@@ -41,6 +44,7 @@
   "group_by_type": "Count",
   "group_by_based_on": "workflow_state",
   "time_interval": "Daily",
+  "filters_json": "[]",
   "is_public": 1
  },
  {
@@ -52,6 +56,7 @@
   "group_by_type": "Count",
   "group_by_based_on": "workflow_state",
   "time_interval": "Daily",
+  "filters_json": "[]",
   "is_public": 1
  },
  {
@@ -63,6 +68,7 @@
   "group_by_type": "Count",
   "group_by_based_on": "status",
   "time_interval": "Daily",
+  "filters_json": "[]",
   "is_public": 1
  }
 ]
