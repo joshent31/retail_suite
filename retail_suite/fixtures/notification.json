@@ -16,8 +16,9 @@
     "receiver_by_document_field": "assigned_to"
    }
   ],
-  "is_standard": 1,
-  "module": "Apparel Management"
+  "is_standard": 0,
+  "module": "Apparel Management",
+  "value_changed": "workflow_state"
  },
  {
   "doctype": "Notification",
@@ -36,7 +37,7 @@
     "receiver_by_role": "Apparel Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Apparel Management"
  },
  {
@@ -56,8 +57,9 @@
     "receiver_by_role": "Footwear Manager"
    }
   ],
-  "is_standard": 1,
-  "module": "Footwear Management"
+  "is_standard": 0,
+  "module": "Footwear Management",
+  "value_changed": "workflow_state"
  },
  {
   "doctype": "Notification",
@@ -66,7 +68,7 @@
   "document_type": "Footwear Vendor Rating",
   "event": "Save",
   "channel": "System Notification",
-  "condition": "doc.overall_rating < 5",
+  "condition": "doc.overall_rating and doc.overall_rating < 5",
   "date_changed": null,
   "days_in_advance": null,
   "message": "<p>Supplier {{ doc.supplier }} scored {{ doc.overall_rating }}/10 for {{ doc.rating_period }}.</p>",
@@ -76,7 +78,7 @@
     "receiver_by_role": "Footwear Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Footwear Management"
  },
  {
@@ -96,7 +98,7 @@
     "receiver_by_role": "Accessories Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Accessories Management"
  },
  {
@@ -116,7 +118,7 @@
     "receiver_by_role": "Accessories Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Accessories Management"
  },
  {
@@ -136,7 +138,7 @@
     "receiver_by_document_field": "visited_by"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Home Makeover Management"
  },
  {
@@ -156,7 +158,7 @@
     "receiver_by_role": "Home Makeover Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Home Makeover Management"
  },
  {
@@ -176,7 +178,7 @@
     "receiver_by_document_field": "stylist"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Lifestyle Fashion Management"
  },
  {
@@ -196,7 +198,7 @@
     "receiver_by_role": "Fashion Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Lifestyle Fashion Management"
  },
  {
@@ -216,8 +218,9 @@
     "receiver_by_role": "FMCG Manager"
    }
   ],
-  "is_standard": 1,
-  "module": "Fmcg Management"
+  "is_standard": 0,
+  "module": "Fmcg Management",
+  "value_changed": "status"
  },
  {
   "doctype": "Notification",
@@ -226,7 +229,7 @@
   "document_type": "FMCG Distributor Master",
   "event": "Save",
   "channel": "System Notification",
-  "condition": "doc.outstanding_amount > doc.credit_limit and doc.credit_limit > 0",
+  "condition": "doc.outstanding_amount and doc.credit_limit and doc.outstanding_amount > doc.credit_limit",
   "date_changed": null,
   "days_in_advance": null,
   "message": "<p>Distributor {{ doc.distributor_name }} has exceeded its credit limit. Outstanding: {{ doc.outstanding_amount }}, Limit: {{ doc.credit_limit }}.</p>",
@@ -236,7 +239,7 @@
     "receiver_by_role": "FMCG Manager"
    }
   ],
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "Fmcg Management"
  }
 ]

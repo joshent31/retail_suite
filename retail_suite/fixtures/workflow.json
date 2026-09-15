@@ -76,7 +76,7 @@
     "allowed": "Apparel Manager"
    },
    {
-    "state": "Draft",
+    "state": "Completed",
     "action": "Cancel",
     "next_state": "Cancelled",
     "allowed": "Apparel Manager"
@@ -273,7 +273,7 @@
     "allowed": "Home Makeover Manager"
    },
    {
-    "state": "Lead",
+    "state": "Completed",
     "action": "Cancel",
     "next_state": "Cancelled",
     "allowed": "Home Makeover Manager"
@@ -324,7 +324,7 @@
     "allowed": "Fashion Manager"
    },
    {
-    "state": "Proposed",
+    "state": "Completed",
     "action": "Cancel",
     "next_state": "Cancelled",
     "allowed": "Fashion Manager"
