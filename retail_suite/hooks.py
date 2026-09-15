@@ -22,29 +22,29 @@ fixtures = [
 
 # Installation
 # ------------
-before_install = "retail_suite.retail_suite.install.before_install"
-after_uninstall = "retail_suite.retail_suite.install.after_uninstall"
+before_install = "retail_suite.install.before_install"
+after_uninstall = "retail_suite.install.after_uninstall"
 
 # Document Events
 # ----------------
 doc_events = {
 	"Apparel Production Order": {
-		"on_update": "retail_suite.retail_suite.utils.sync_workflow_status",
+		"on_update": "retail_suite.utils.sync_workflow_status",
 	},
 	"Footwear Warranty Claim": {
-		"on_update": "retail_suite.retail_suite.utils.sync_workflow_status",
+		"on_update": "retail_suite.utils.sync_workflow_status",
 	},
 	"Accessory Consignment Stock": {
-		"on_update": "retail_suite.retail_suite.utils.sync_workflow_status",
+		"on_update": "retail_suite.utils.sync_workflow_status",
 	},
 	"Home Makeover Project": {
-		"on_update": "retail_suite.retail_suite.utils.sync_workflow_status",
+		"on_update": "retail_suite.utils.sync_workflow_status",
 	},
 	"Influencer Brand Collaboration": {
-		"on_update": "retail_suite.retail_suite.utils.sync_workflow_status",
+		"on_update": "retail_suite.utils.sync_workflow_status",
 	},
 	"FMCG Scheme Promotion": {
-		"on_update": "retail_suite.retail_suite.utils.sync_workflow_status",
+		"on_update": "retail_suite.utils.sync_workflow_status",
 	},
 }
 
@@ -52,6 +52,6 @@ doc_events = {
 # ----------------
 scheduler_events = {
 	"daily": [
-		"retail_suite.retail_suite.tasks.daily",
+		"retail_suite.tasks.daily",
 	],
 }

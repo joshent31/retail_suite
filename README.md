@@ -30,7 +30,7 @@ Every module follows the same conventions:
   and dashboard charts.
 - **Fixtures** — Roles, Notifications, Workflows, Print Formats, Number
   Cards, and Dashboard Charts are versioned under
-  `retail_suite/retail_suite/fixtures/` and wired through `hooks.py`.
+  `retail_suite/fixtures/` and wired through `hooks.py`.
 - **Daily jobs** — one scheduler entry dispatches to each sector's daily
   task (expiry alerts, loyalty expiry sweeps, overdue production, ageing
   consignments, milestone reminders, stale warranty claims).

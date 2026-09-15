@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-with open("retail_suite/retail_suite/__init__.py") as f:
+with open("retail_suite/__init__.py") as f:
     version = "0.0.1"
     for line in f:
         if line.startswith("__version__"):
