@@ -1,61 +1,73 @@
 [
  {
   "doctype": "Role",
+  "name": "Apparel Manager",
   "role_name": "Apparel Manager",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Apparel User",
   "role_name": "Apparel User",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Footwear Manager",
   "role_name": "Footwear Manager",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Footwear User",
   "role_name": "Footwear User",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Accessories Manager",
   "role_name": "Accessories Manager",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Accessories User",
   "role_name": "Accessories User",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Home Makeover Manager",
   "role_name": "Home Makeover Manager",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Home Makeover Designer",
   "role_name": "Home Makeover Designer",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Fashion Manager",
   "role_name": "Fashion Manager",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "Fashion Stylist",
   "role_name": "Fashion Stylist",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "FMCG Manager",
   "role_name": "FMCG Manager",
   "desk_access": 1
  },
  {
   "doctype": "Role",
+  "name": "FMCG User",
   "role_name": "FMCG User",
   "desk_access": 1
  }
