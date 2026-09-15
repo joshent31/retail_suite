@@ -16,7 +16,8 @@
     "receiver_by_document_field": "assigned_to"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Apparel Management"
  },
  {
   "doctype": "Notification",
@@ -35,7 +36,8 @@
     "receiver_by_role": "Apparel Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Apparel Management"
  },
  {
   "doctype": "Notification",
@@ -54,7 +56,8 @@
     "receiver_by_role": "Footwear Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Footwear Management"
  },
  {
   "doctype": "Notification",
@@ -73,7 +76,8 @@
     "receiver_by_role": "Footwear Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Footwear Management"
  },
  {
   "doctype": "Notification",
@@ -92,7 +96,8 @@
     "receiver_by_role": "Accessories Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Accessories Management"
  },
  {
   "doctype": "Notification",
@@ -111,7 +116,8 @@
     "receiver_by_role": "Accessories Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Accessories Management"
  },
  {
   "doctype": "Notification",
@@ -130,7 +136,8 @@
     "receiver_by_document_field": "visited_by"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Home Makeover Management"
  },
  {
   "doctype": "Notification",
@@ -149,7 +156,8 @@
     "receiver_by_role": "Home Makeover Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Home Makeover Management"
  },
  {
   "doctype": "Notification",
@@ -168,7 +176,8 @@
     "receiver_by_document_field": "stylist"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Lifestyle Fashion Management"
  },
  {
   "doctype": "Notification",
@@ -187,7 +196,8 @@
     "receiver_by_role": "Fashion Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Lifestyle Fashion Management"
  },
  {
   "doctype": "Notification",
@@ -206,7 +216,8 @@
     "receiver_by_role": "FMCG Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Fmcg Management"
  },
  {
   "doctype": "Notification",
@@ -225,6 +236,7 @@
     "receiver_by_role": "FMCG Manager"
    }
   ],
-  "is_standard": 1
+  "is_standard": 1,
+  "module": "Fmcg Management"
  }
 ]

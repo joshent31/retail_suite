@@ -29,7 +29,7 @@
   "type": "Document Type",
   "func": "Count",
   "document_type": "Accessory Consignment Stock",
-  "filters_json": "[[\"docstatus\", \"=\", 1], [\"workflow_state\", \"in\", [\"Received\", \"Partially Sold\"]]]",
+  "filters_json": "[[\"workflow_state\", \"in\", [\"Received\", \"Partially Sold\"]]]",
   "is_public": 1
  },
  {
