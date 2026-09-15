@@ -1,0 +1,56 @@
+[
+ {
+  "doctype": "Print Format",
+  "name": "Apparel Production Order Slip",
+  "doc_type": "Apparel Production Order",
+  "module": "Apparel Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Production Order Slip</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Order No</b></td><td>{{ doc.name }}</td><td><b>Style</b></td><td>{{ doc.style }}</td></tr>\n    <tr><td><b>Qty to Produce</b></td><td>{{ doc.qty_to_produce }}</td><td><b>Status</b></td><td>{{ doc.status }}</td></tr>\n    <tr><td><b>Cutting Date</b></td><td>{{ doc.cutting_date or '' }}</td><td><b>Packing Date</b></td><td>{{ doc.packing_date or '' }}</td></tr>\n  </table>\n</div>"
+ },
+ {
+  "doctype": "Print Format",
+  "name": "Warranty Claim Certificate",
+  "doc_type": "Footwear Warranty Claim",
+  "module": "Footwear Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Warranty Claim Certificate</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Claim No</b></td><td>{{ doc.name }}</td><td><b>Customer</b></td><td>{{ doc.customer }}</td></tr>\n    <tr><td><b>Item</b></td><td>{{ doc.item }}</td><td><b>Status</b></td><td>{{ doc.workflow_state }}</td></tr>\n  </table>\n</div>"
+ },
+ {
+  "doctype": "Print Format",
+  "name": "Consignment Note",
+  "doc_type": "Accessory Consignment Stock",
+  "module": "Accessories Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Consignment Note</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Consignment No</b></td><td>{{ doc.name }}</td><td><b>Supplier</b></td><td>{{ doc.supplier }}</td></tr>\n    <tr><td><b>Date</b></td><td>{{ doc.consignment_date }}</td><td><b>Status</b></td><td>{{ doc.workflow_state }}</td></tr>\n  </table>\n</div>"
+ },
+ {
+  "doctype": "Print Format",
+  "name": "Project Estimate Quotation",
+  "doc_type": "Material Estimation",
+  "module": "Home Makeover Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Project Estimate Quotation</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Estimation No</b></td><td>{{ doc.name }}</td><td><b>Project</b></td><td>{{ doc.project }}</td></tr>\n    <tr><td><b>Total Estimated Cost</b></td><td colspan=\"3\">{{ doc.total_estimated_cost }}</td></tr>\n  </table>\n</div>"
+ },
+ {
+  "doctype": "Print Format",
+  "name": "Style Consultation Confirmation",
+  "doc_type": "Style Consultation Booking",
+  "module": "Lifestyle Fashion Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Style Consultation Confirmation</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Customer</b></td><td>{{ doc.customer }}</td><td><b>Date</b></td><td>{{ doc.booking_date }}</td></tr>\n    <tr><td><b>Time Slot</b></td><td>{{ doc.time_slot }}</td><td><b>Type</b></td><td>{{ doc.consultation_type }}</td></tr>\n  </table>\n</div>"
+ },
+ {
+  "doctype": "Print Format",
+  "name": "Van Sales Invoice",
+  "doc_type": "FMCG Van Sales Entry",
+  "module": "FMCG Management",
+  "print_format_type": "Jinja",
+  "standard": "Yes",
+  "html": "<div class=\"print-format\">\n  <h2>Van Sales Invoice</h2>\n  <table class=\"table table-bordered\">\n    <tr><td><b>Entry No</b></td><td>{{ doc.name }}</td><td><b>Salesperson</b></td><td>{{ doc.salesperson }}</td></tr>\n    <tr><td><b>Date</b></td><td>{{ doc.date }}</td><td><b>Total Amount</b></td><td>{{ doc.total_amount }}</td></tr>\n  </table>\n</div>"
+ }
+]

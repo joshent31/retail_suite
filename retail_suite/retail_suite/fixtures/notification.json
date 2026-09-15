@@ -1,0 +1,230 @@
+[
+ {
+  "doctype": "Notification",
+  "name": "Apparel Production Completed",
+  "subject": "Production Order {{ doc.name }} Completed",
+  "document_type": "Apparel Production Order",
+  "event": "Value Change",
+  "channel": "System Notification",
+  "condition": "doc.workflow_state == \"Completed\"",
+  "date_changed": "workflow_state",
+  "days_in_advance": null,
+  "message": "<p>Production Order {{ doc.name }} for style {{ doc.style }} has been marked Completed.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_document_field": "assigned_to"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Apparel QC Failed Alert",
+  "subject": "QC Failed: {{ doc.name }}",
+  "document_type": "Apparel Quality Inspection",
+  "event": "Submit",
+  "channel": "System Notification",
+  "condition": "doc.result == \"Fail\"",
+  "date_changed": null,
+  "days_in_advance": null,
+  "message": "<p>Quality Inspection {{ doc.name }} for production order {{ doc.production_order }} has FAILED. Defects found: {{ doc.defects_found }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Apparel Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Footwear Warranty Status Update",
+  "subject": "Warranty Claim {{ doc.name }} Updated",
+  "document_type": "Footwear Warranty Claim",
+  "event": "Value Change",
+  "channel": "System Notification",
+  "condition": "",
+  "date_changed": "workflow_state",
+  "days_in_advance": null,
+  "message": "<p>Warranty claim {{ doc.name }} for {{ doc.customer }} is now {{ doc.workflow_state }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Footwear Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Footwear Low Rated Vendor Alert",
+  "subject": "Low Vendor Rating: {{ doc.supplier }}",
+  "document_type": "Footwear Vendor Rating",
+  "event": "Save",
+  "channel": "System Notification",
+  "condition": "doc.overall_rating < 5",
+  "date_changed": null,
+  "days_in_advance": null,
+  "message": "<p>Supplier {{ doc.supplier }} scored {{ doc.overall_rating }}/10 for {{ doc.rating_period }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Footwear Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Consignment Settlement Due",
+  "subject": "Consignment {{ doc.name }} Pending Settlement",
+  "document_type": "Accessory Consignment Stock",
+  "event": "Days After",
+  "channel": "System Notification",
+  "condition": "doc.workflow_state != \"Settled\"",
+  "date_changed": "consignment_date",
+  "days_in_advance": 30,
+  "message": "<p>Consignment {{ doc.name }} from {{ doc.supplier }} is over 30 days old and not yet settled.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Accessories Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Bundle Expiry Reminder",
+  "subject": "Bundle {{ doc.bundle_name }} Expiring Soon",
+  "document_type": "Accessory Item Bundle",
+  "event": "Days Before",
+  "channel": "System Notification",
+  "condition": "",
+  "date_changed": "valid_upto",
+  "days_in_advance": 7,
+  "message": "<p>Bundle offer {{ doc.bundle_name }} expires on {{ doc.valid_upto }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Accessories Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Site Visit Reminder",
+  "subject": "Site Visit Scheduled for {{ doc.project }}",
+  "document_type": "Site Visit Log",
+  "event": "Days Before",
+  "channel": "System Notification",
+  "condition": "",
+  "date_changed": "next_visit_date",
+  "days_in_advance": 1,
+  "message": "<p>A site visit for project {{ doc.project }} is scheduled on {{ doc.next_visit_date }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_document_field": "visited_by"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Milestone Payment Due",
+  "subject": "Milestone Payment Due for {{ doc.project }}",
+  "document_type": "Project Milestone Payment",
+  "event": "New",
+  "channel": "System Notification",
+  "condition": "",
+  "date_changed": null,
+  "days_in_advance": null,
+  "message": "<p>Milestone payment schedule created for project {{ doc.project }}. Please review due dates.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Home Makeover Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Style Consultation Reminder",
+  "subject": "Consultation Reminder for {{ doc.customer }}",
+  "document_type": "Style Consultation Booking",
+  "event": "Days Before",
+  "channel": "System Notification",
+  "condition": "doc.status == \"Scheduled\"",
+  "date_changed": "booking_date",
+  "days_in_advance": 1,
+  "message": "<p>Reminder: consultation with {{ doc.customer }} is scheduled on {{ doc.booking_date }} ({{ doc.time_slot }}).</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_document_field": "stylist"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Loyalty Points Expiry Alert",
+  "subject": "Loyalty Points Expiring for {{ doc.customer }}",
+  "document_type": "Loyalty Points Ledger",
+  "event": "Submit",
+  "channel": "System Notification",
+  "condition": "doc.transaction_type == \"Expired\"",
+  "date_changed": null,
+  "days_in_advance": null,
+  "message": "<p>{{ doc.points }} loyalty points have expired for {{ doc.customer }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "Fashion Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FMCG Near Expiry Alert",
+  "subject": "Stock Nearing Expiry: {{ doc.item }}",
+  "document_type": "FMCG Batch Expiry Tracker",
+  "event": "Value Change",
+  "channel": "System Notification",
+  "condition": "doc.status == \"Near Expiry\"",
+  "date_changed": "status",
+  "days_in_advance": null,
+  "message": "<p>Item {{ doc.item }} (Batch {{ doc.batch }}) in {{ doc.warehouse }} is nearing expiry on {{ doc.expiry_date }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "FMCG Manager"
+   }
+  ],
+  "is_standard": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "Distributor Credit Limit Exceeded",
+  "subject": "Credit Limit Exceeded: {{ doc.distributor_name }}",
+  "document_type": "FMCG Distributor Master",
+  "event": "Save",
+  "channel": "System Notification",
+  "condition": "doc.outstanding_amount > doc.credit_limit and doc.credit_limit > 0",
+  "date_changed": null,
+  "days_in_advance": null,
+  "message": "<p>Distributor {{ doc.distributor_name }} has exceeded its credit limit. Outstanding: {{ doc.outstanding_amount }}, Limit: {{ doc.credit_limit }}.</p>",
+  "enabled": 1,
+  "recipients": [
+   {
+    "receiver_by_role": "FMCG Manager"
+   }
+  ],
+  "is_standard": 1
+ }
+]

@@ -1,0 +1,11 @@
+include MANIFEST.in
+include requirements.txt
+include *.txt
+include *.md
+recursive-include retail_suite *.json
+recursive-include retail_suite *.js
+recursive-include retail_suite *.css
+recursive-include retail_suite *.md
+recursive-include retail_suite *.html
+recursive-exclude retail_suite *.pyc
+recursive-exclude * __pycache__

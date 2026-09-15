@@ -1,0 +1,385 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "Apparel Production Workflow",
+  "document_type": "Apparel Production Order",
+  "workflow_name": "Apparel Production Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Cutting",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Sewing",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Finishing",
+    "doc_status": "0",
+    "allow_edit": "Apparel User"
+   },
+   {
+    "state": "Packed",
+    "doc_status": "0",
+    "allow_edit": "Apparel Manager"
+   },
+   {
+    "state": "Completed",
+    "doc_status": "1",
+    "allow_edit": "Apparel Manager"
+   },
+   {
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "Apparel Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Start Cutting",
+    "next_state": "Cutting",
+    "allowed": "Apparel User"
+   },
+   {
+    "state": "Cutting",
+    "action": "Start Sewing",
+    "next_state": "Sewing",
+    "allowed": "Apparel User"
+   },
+   {
+    "state": "Sewing",
+    "action": "Start Finishing",
+    "next_state": "Finishing",
+    "allowed": "Apparel User"
+   },
+   {
+    "state": "Finishing",
+    "action": "Mark Packed",
+    "next_state": "Packed",
+    "allowed": "Apparel Manager"
+   },
+   {
+    "state": "Packed",
+    "action": "Complete",
+    "next_state": "Completed",
+    "allowed": "Apparel Manager"
+   },
+   {
+    "state": "Draft",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "Apparel Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Footwear Warranty Claim Workflow",
+  "document_type": "Footwear Warranty Claim",
+  "workflow_name": "Footwear Warranty Claim Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Open",
+    "doc_status": "0",
+    "allow_edit": "Footwear User"
+   },
+   {
+    "state": "Under Review",
+    "doc_status": "0",
+    "allow_edit": "Footwear Manager"
+   },
+   {
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "Footwear Manager"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": "0",
+    "allow_edit": "Footwear Manager"
+   },
+   {
+    "state": "Resolved",
+    "doc_status": "1",
+    "allow_edit": "Footwear Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Open",
+    "action": "Send for Review",
+    "next_state": "Under Review",
+    "allowed": "Footwear User"
+   },
+   {
+    "state": "Under Review",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "Footwear Manager"
+   },
+   {
+    "state": "Under Review",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Footwear Manager"
+   },
+   {
+    "state": "Approved",
+    "action": "Resolve",
+    "next_state": "Resolved",
+    "allowed": "Footwear Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Accessory Consignment Workflow",
+  "document_type": "Accessory Consignment Stock",
+  "workflow_name": "Accessory Consignment Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Received",
+    "doc_status": "0",
+    "allow_edit": "Accessories User"
+   },
+   {
+    "state": "Partially Sold",
+    "doc_status": "0",
+    "allow_edit": "Accessories User"
+   },
+   {
+    "state": "Settled",
+    "doc_status": "1",
+    "allow_edit": "Accessories Manager"
+   },
+   {
+    "state": "Returned",
+    "doc_status": "1",
+    "allow_edit": "Accessories Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Received",
+    "action": "Record Sale",
+    "next_state": "Partially Sold",
+    "allowed": "Accessories User"
+   },
+   {
+    "state": "Partially Sold",
+    "action": "Settle",
+    "next_state": "Settled",
+    "allowed": "Accessories Manager"
+   },
+   {
+    "state": "Received",
+    "action": "Return to Supplier",
+    "next_state": "Returned",
+    "allowed": "Accessories Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Home Makeover Project Workflow",
+  "document_type": "Home Makeover Project",
+  "workflow_name": "Home Makeover Project Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Lead",
+    "doc_status": "0",
+    "allow_edit": "Home Makeover Designer"
+   },
+   {
+    "state": "Consultation",
+    "doc_status": "0",
+    "allow_edit": "Home Makeover Designer"
+   },
+   {
+    "state": "Design",
+    "doc_status": "0",
+    "allow_edit": "Home Makeover Designer"
+   },
+   {
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "Home Makeover Manager"
+   },
+   {
+    "state": "Execution",
+    "doc_status": "0",
+    "allow_edit": "Home Makeover Manager"
+   },
+   {
+    "state": "Completed",
+    "doc_status": "1",
+    "allow_edit": "Home Makeover Manager"
+   },
+   {
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "Home Makeover Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Lead",
+    "action": "Schedule Consultation",
+    "next_state": "Consultation",
+    "allowed": "Home Makeover Designer"
+   },
+   {
+    "state": "Consultation",
+    "action": "Start Design",
+    "next_state": "Design",
+    "allowed": "Home Makeover Designer"
+   },
+   {
+    "state": "Design",
+    "action": "Get Approval",
+    "next_state": "Approved",
+    "allowed": "Home Makeover Manager"
+   },
+   {
+    "state": "Approved",
+    "action": "Start Execution",
+    "next_state": "Execution",
+    "allowed": "Home Makeover Manager"
+   },
+   {
+    "state": "Execution",
+    "action": "Complete",
+    "next_state": "Completed",
+    "allowed": "Home Makeover Manager"
+   },
+   {
+    "state": "Lead",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "Home Makeover Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Influencer Collaboration Workflow",
+  "document_type": "Influencer Brand Collaboration",
+  "workflow_name": "Influencer Collaboration Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Proposed",
+    "doc_status": "0",
+    "allow_edit": "Fashion Stylist"
+   },
+   {
+    "state": "Active",
+    "doc_status": "0",
+    "allow_edit": "Fashion Manager"
+   },
+   {
+    "state": "Completed",
+    "doc_status": "1",
+    "allow_edit": "Fashion Manager"
+   },
+   {
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "Fashion Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Proposed",
+    "action": "Activate",
+    "next_state": "Active",
+    "allowed": "Fashion Manager"
+   },
+   {
+    "state": "Active",
+    "action": "Complete",
+    "next_state": "Completed",
+    "allowed": "Fashion Manager"
+   },
+   {
+    "state": "Proposed",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "Fashion Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FMCG Scheme Promotion Workflow",
+  "document_type": "FMCG Scheme Promotion",
+  "workflow_name": "FMCG Scheme Promotion Workflow",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FMCG User"
+   },
+   {
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "FMCG Manager"
+   },
+   {
+    "state": "Active",
+    "doc_status": "1",
+    "allow_edit": "FMCG Manager"
+   },
+   {
+    "state": "Expired",
+    "doc_status": "1",
+    "allow_edit": "FMCG Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FMCG Manager"
+   },
+   {
+    "state": "Approved",
+    "action": "Activate",
+    "next_state": "Active",
+    "allowed": "FMCG Manager"
+   },
+   {
+    "state": "Active",
+    "action": "Expire",
+    "next_state": "Expired",
+    "allowed": "FMCG Manager"
+   }
+  ]
+ }
+]

@@ -1,0 +1,68 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Apparel Production by Status",
+  "chart_name": "Production Orders by Status",
+  "chart_type": "Group By",
+  "document_type": "Apparel Production Order",
+  "group_by_type": "Count",
+  "based_on": "status",
+  "time_interval": "Daily",
+  "is_public": 1
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Footwear Claims by Status",
+  "chart_name": "Warranty Claims by Status",
+  "chart_type": "Group By",
+  "document_type": "Footwear Warranty Claim",
+  "group_by_type": "Count",
+  "based_on": "workflow_state",
+  "time_interval": "Daily",
+  "is_public": 1
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Accessories Consignments by Status",
+  "chart_name": "Consignments by Status",
+  "chart_type": "Group By",
+  "document_type": "Accessory Consignment Stock",
+  "group_by_type": "Count",
+  "based_on": "workflow_state",
+  "time_interval": "Daily",
+  "is_public": 1
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Home Makeover Projects by Status",
+  "chart_name": "Projects by Status",
+  "chart_type": "Group By",
+  "document_type": "Home Makeover Project",
+  "group_by_type": "Count",
+  "based_on": "workflow_state",
+  "time_interval": "Daily",
+  "is_public": 1
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Lifestyle Collaborations by Status",
+  "chart_name": "Influencer Collaborations by Status",
+  "chart_type": "Group By",
+  "document_type": "Influencer Brand Collaboration",
+  "group_by_type": "Count",
+  "based_on": "workflow_state",
+  "time_interval": "Daily",
+  "is_public": 1
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "FMCG Batches by Status",
+  "chart_name": "Batches by Expiry Status",
+  "chart_type": "Group By",
+  "document_type": "FMCG Batch Expiry Tracker",
+  "group_by_type": "Count",
+  "based_on": "status",
+  "time_interval": "Daily",
+  "is_public": 1
+ }
+]

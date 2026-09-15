@@ -1,0 +1,62 @@
+[
+ {
+  "doctype": "Role",
+  "role_name": "Apparel Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Apparel User",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Footwear Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Footwear User",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Accessories Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Accessories User",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Home Makeover Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Home Makeover Designer",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Fashion Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "Fashion Stylist",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "FMCG Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "role_name": "FMCG User",
+  "desk_access": 1
+ }
+]

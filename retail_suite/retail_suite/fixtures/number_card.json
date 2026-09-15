@@ -1,0 +1,68 @@
+[
+ {
+  "doctype": "Number Card",
+  "name": "Apparel Open Production Orders",
+  "label": "Open Production Orders",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Apparel Production Order",
+  "filters_json": "[[\"docstatus\", \"=\", 0], [\"status\", \"not in\", [\"Completed\", \"Cancelled\"]]]",
+  "is_public": 1
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Footwear Open Warranty Claims",
+  "label": "Open Warranty Claims",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Footwear Warranty Claim",
+  "filters_json": "[[\"docstatus\", \"=\", 0], [\"workflow_state\", \"in\", [\"Open\", \"Under Review\"]]]",
+  "is_public": 1
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Accessories Active Consignments",
+  "label": "Active Consignments",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Accessory Consignment Stock",
+  "filters_json": "[[\"docstatus\", \"=\", 1], [\"workflow_state\", \"in\", [\"Received\", \"Partially Sold\"]]]",
+  "is_public": 1
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Home Makeover Active Projects",
+  "label": "Active Projects",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Home Makeover Project",
+  "filters_json": "[[\"docstatus\", \"=\", 0], [\"workflow_state\", \"not in\", [\"Completed\", \"Cancelled\"]]]",
+  "is_public": 1
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Lifestyle Active Collaborations",
+  "label": "Active Influencer Collaborations",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "Influencer Brand Collaboration",
+  "filters_json": "[[\"docstatus\", \"=\", 0], [\"workflow_state\", \"not in\", [\"Completed\", \"Cancelled\"]]]",
+  "is_public": 1
+ },
+ {
+  "doctype": "Number Card",
+  "name": "FMCG Near Expiry Batches",
+  "label": "Near-Expiry Batches",
+  "show_name": 1,
+  "type": "Document Type",
+  "func": "Count",
+  "document_type": "FMCG Batch Expiry Tracker",
+  "filters_json": "[[\"status\", \"in\", [\"Near Expiry\", \"Expired\"]]]",
+  "is_public": 1
+ }
+]
